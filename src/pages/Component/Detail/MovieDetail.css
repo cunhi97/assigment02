@@ -1,0 +1,32 @@
+.parent_container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .content {
+    text-align: left;
+    margin-right: 100px;
+ 
+  }
+  
+  .title {
+   border-bottom: 2px solid white ;
+   padding-bottom: 20px;
+  }
+
+  .youtube_container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .youtube_video {
+    width: 600px;
+    height: 350px;
+    object-fit: cover;
+    text-align: right;
+  }
+  
+  .content_child{
+    font-size: 14px;
+
+  }

@@ -1,0 +1,88 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+    /* chuyển đổi màu cho backgroud-color từ #fff sang #333 . time chuyển đổi 0.3s và hiệu ứng là ease */
+    z-index: 1000;
+    
+  }
+
+  /* đổi màu nền  */
+  .navbar.scrolled {
+    background-color: #333;
+  }
+  
+  /* css cho logo */
+  .brand {
+    font-size: 1.5rem;
+    color: #fa0707;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+
+  /* màu logo */
+  /* .brand.white {
+    color: #09b9e5;
+  }
+   */
+
+   /* chứa icon search */
+  .search {
+    display: flex;
+    align-items: center;
+  }
+  
+
+  /* nút tìm kím */
+  .search a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    color: #1228efd3;
+    padding-right: 30px;
+  }
+  
+
+  /* biểu tượng tìm kiếm  */
+.searchIcon {
+    margin-left: 10px;
+    color: #1228efd3;
+    transition: all 0.3s ease-in-out; /*hiệu ứng di chuyển */
+    font-size: 2em;
+  }
+  
+
+  /*biểu tượng thay đổi màu khi cuộn chuột */
+  .scrolled .searchIcon {
+    color: #e01313;
+  }
+  
+  /* nút tìm kiếm thay đổi màu sắc khi cuộn */
+  .scrolled .search a svg {
+    fill: #e01313;
+     width: 1.5em;
+     height: 1.5em;
+  }
+
+
+  .svgScrolled {
+    color: #0dd0e9;
+    
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 10px;
+    }
+  }
+  

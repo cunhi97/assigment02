@@ -1,0 +1,76 @@
+.movieList {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: scroll;
+  scroll-snap-type: x mandatory;
+  flex-direction: row;
+  padding: 8px;
+  scroll-behavior: smooth;
+  width: 100%;
+  background-color: black;
+}
+
+.movie {
+  margin-right: 16px;
+  scroll-snap-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+
+.movie:last-child {
+  margin-right: 0; /* Thêm quy tắc để loại bỏ khoảng trắng phía sau phần tử cuối cùng */
+}
+
+.movie:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ để tăng độ nổi bật khi hover */
+}
+
+
+/* .movie img {
+  object-fit: cover;
+  width: 400px;
+  height: 200px;
+  }
+   */
+   .poster_path {
+   width: 150px;
+   height: 250px;
+   object-fit: cover;
+  }
+
+   .backdrop_path {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+  }
+  /* .movie img[data-type="poster_path"] {
+  height: 480px;
+  } */
+
+.movie h3 {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.movie p {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  .movieList {
+    scroll-snap-type: none; /* Tắt scroll-snap trên thiết bị di động */
+    overflow-x: scroll; /* Thay đổi overflow-x để cho phép người dùng cuộn trên thiết bị di động */
+  }
+  .movie {
+    margin-right: 8px; /* Giảm khoảng cách giữa các phim trên thiết bị di động */
+    min-width: 200px;
+  }}
+::-webkit-scrollbar {
+  display: none;
+}

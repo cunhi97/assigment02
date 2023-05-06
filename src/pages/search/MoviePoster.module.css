@@ -1,0 +1,62 @@
+
+.movie_card_result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 8px;
+  width: 100%;
+}
+
+.movie_card {
+  margin-right: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  margin-bottom: 15px;
+  }
+  
+  .movie_card:last-child {
+    margin-right: 0; /* Thêm quy tắc để loại bỏ khoảng trắng phía sau phần tử cuối cùng */
+  }
+  
+  .movie_card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm bóng đổ để tăng độ nổi bật khi hover */
+  }
+  
+  
+  .poster_path {
+    width: 150px;
+    height: 250px;
+    object-fit: cover;
+   }
+ 
+    .backdrop_path {
+     width: 250px;
+     height: 150px;
+     object-fit: cover;
+   }
+
+  .movie_title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+    text-align: center;
+  }
+  
+  /* .movie-release-date {
+    font-size: 14px;
+    color: gray;
+    text-align: center;
+  }
+   */
+  @media screen and (max-width: 767px) {
+    .movie-card {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  
